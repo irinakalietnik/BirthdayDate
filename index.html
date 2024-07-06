@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clock</title>
+    <link rel="stylesheet" href="./style/birthday.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="text">Введіть дату Народження!</div>
+      <div class="input-box">
+        <input type="date" name="birthday" id="birthday" />
+        <button onclick="inputValueDate()" type="button">Застосувати</button>
+      </div>
+      <div class="text">До Дня Народження залишилось....</div>
+      <div class="clock">
+        <div>
+          <div class="box-time" id="day">12</div>
+          <p>Днів</p>
+        </div>
+        <div>
+          <div class="box-time" id="hour">04</div>
+          <p>Годин</p>
+        </div>
+        <div>
+          <div class="box-time" id="minute">15</div>
+          <p>Хвилин</p>
+        </div>
+        <div>
+          <div class="box-time" id="second">16</div>
+          <p>Секунд</p>
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/date2.js"></script>
+  </body>
+</html>
