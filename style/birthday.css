@@ -26,7 +26,7 @@ body {
 }
 .text {
   font-size: 2rem;
-  color: rgb(167, 43, 119);
+  color: rgb(151, 94, 158);
 }
 button {
   font-weight: 700;
@@ -34,7 +34,7 @@ button {
   width: 140px;
   border: none;
   color: rgb(14, 109, 133);
-  background-color: rgb(230, 253, 22);
+  background-color: rgb(211, 172, 63);
   border-radius: 4px;
   font-size: 1rem;
   font-family: "Montserrat", sans-serif;
@@ -73,7 +73,7 @@ input::placeholder {
   color: rgb(14, 109, 133);
 }
 input:focus {
-  border: 3px solid rgb(221, 218, 63);
+  border: 3px solid rgb(187, 189, 64);
 }
 .input-box {
   align-items: center;
