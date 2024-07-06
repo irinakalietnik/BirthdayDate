@@ -1,14 +1,28 @@
 function inputValueDate() {
   var inputBirthdayDate = document.getElementById("birthday").value;
-  let dateParseArr = inputBirthdayDate.split("-");
+  let dateParseArr = inputBirthdayDate.split(".");
+  const year = +dateParseArr[2];
+  const month = +dateParseArr[1];
+  const day = +dateParseArr[0];
+  if (
+    dateParseArr.length !== 3 ||
+    dateParseArr[2].length !== 4 ||
+    dateParseArr[1].length !== 2 ||
+    dateParseArr[0].length !== 2
+  )
+    return alert("Некоректний ввід даних!");
+
+  const date = new Date(year, month - 1, day);
+  if (
+    year !== date.getFullYear() ||
+    month !== date.getMonth() + 1 ||
+    day !== date.getDate()
+  ) {
+    return alert("Некоректний ввід даних!");
+  }
 
   return (function daysUntilBirthday() {
     setInterval(daysUntilBirthday, 1000);
-    const year = +dateParseArr[0];
-    const month = +dateParseArr[1];
-    const day = +dateParseArr[2];
-
-    const date = new Date(year, month - 1, day);
 
     let now = new Date();
     let thisYearBirthday = new Date(

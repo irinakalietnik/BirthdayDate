@@ -10,25 +10,31 @@
     <div class="container">
       <div class="text">Введіть дату Народження!</div>
       <div class="input-box">
-        <input type="date" name="birthday" id="birthday" />
+        <input
+          class="input"
+          type="text"
+          name="birthday"
+          id="birthday"
+          placeholder="DD.MM.YYYY"
+        />
         <button onclick="inputValueDate()" type="button">Застосувати</button>
       </div>
       <div class="text">До Дня Народження залишилось....</div>
       <div class="clock">
         <div>
-          <div class="box-time" id="day">12</div>
+          <div class="box-time" id="day">00</div>
           <p>Днів</p>
         </div>
         <div>
-          <div class="box-time" id="hour">04</div>
+          <div class="box-time" id="hour">00</div>
           <p>Годин</p>
         </div>
         <div>
-          <div class="box-time" id="minute">15</div>
+          <div class="box-time" id="minute">00</div>
           <p>Хвилин</p>
         </div>
         <div>
-          <div class="box-time" id="second">16</div>
+          <div class="box-time" id="second">00</div>
           <p>Секунд</p>
         </div>
       </div>
