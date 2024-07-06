@@ -35,19 +35,20 @@ function inputValueDate() {
     let seconds = 0;
     let days = 0;
     if (thisYearBirthday > now) {
-      days = (thisYearBirthday - now) / (24 * 60 * 60 * 1000);
-      hours = ((thisYearBirthday - now) / (60 * 60 * 1000)) % 24;
-      minutes = ((thisYearBirthday - now) / (60 * 1000)) % 60;
+      days = (thisYearBirthday - now) / 24 / 60 / 60 / 1000;
+      hours = ((thisYearBirthday - now) / 60 / 60 / 1000) % 24;
+      minutes = ((thisYearBirthday - now) / 60 / 1000) % 60;
       seconds = ((thisYearBirthday - now) / 1000) % 60;
+      console.log(thisYearBirthday);
     } else if (thisYearBirthday < now) {
       thisYearBirthday.setFullYear(thisYearBirthday.getFullYear() + 1);
-      days = (thisYearBirthday - now) / (24 * 60 * 60 * 1000);
-      hours = (thisYearBirthday - now) / (60 * 60 * 1000);
-      minutes = (thisYearBirthday - now) / (60 * 1000);
+      console.log(thisYearBirthday);
+      days = (thisYearBirthday - now) / 24 / 60 / 60 / 1000;
+      hours = ((thisYearBirthday - now) / 60 / 60 / 1000) % 24;
+      minutes = ((thisYearBirthday - now) / 60 / 1000) % 60;
       seconds = ((thisYearBirthday - now) / 1000) % 60;
-      console.log(hours);
     }
-
+    console.log(minutes);
     document.getElementById("day").textContent = `${Math.ceil(days)
       .toString()
       .padStart(2, "0")}`;
