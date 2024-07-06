@@ -4,7 +4,6 @@
   box-sizing: border-box;
 }
 body {
-  width: 100%;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -13,7 +12,7 @@ body {
   font-weight: 800;
   background-image: url(../image/food-cupcake.jpeg);
   background-repeat: no-repeat;
-  background-position: left;
+  background-position: 23%;
   background-size: cover;
   margin: 0;
 }
@@ -23,13 +22,15 @@ body {
   align-items: center;
   display: flex;
   flex-direction: column;
-  height: 600px;
-  width: 900px;
+  height: 100%;
+  max-height: 600px;
+  width: 100%;
+  max-width: 900px;
   padding: 20px;
 }
 .text {
   font-size: 2rem;
-  color: rgb(148, 98, 144);
+  color: rgb(167, 43, 119);
 }
 button {
   font-weight: 700;
@@ -86,6 +87,7 @@ input {
 @media (max-width: 960px) {
   body {
     justify-content: center;
+    background-position: center;
   }
   .container {
     width: 600px;
@@ -113,6 +115,9 @@ input {
   }
 }
 @media (max-width: 650px) {
+  body {
+    background-position: 60%;
+  }
   .text {
     font-size: 16px;
   }
